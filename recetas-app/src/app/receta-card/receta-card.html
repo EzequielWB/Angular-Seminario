@@ -1,0 +1,16 @@
+
+<div class="card h-100 text-center">
+
+  <img [src]="receta.imagen" class="card-img-top" [alt]="receta.nombre">
+
+  <div class="card-body">
+    <h5 class="card-title">{{ receta.nombre }}</h5>
+    <p class="card-text text-muted">{{ receta.categoria }}</p>
+
+    @if (receta.esVegano) {
+      <span class="badge bg-success mb-2">Apto Vegano!!</span>
+    }
+
+    </div>
+  </div>
+

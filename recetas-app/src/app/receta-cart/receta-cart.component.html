@@ -1,0 +1,11 @@
+
+<h5>Mi Pedido</h5>
+<ul>
+  @for (item of cartList$ | async; track item.nombre) {
+    <li>
+      <strong>{{ item.nombre }}</strong>: {{ item.cantidad }} porciones
+    </li>
+  } @empty {
+    <li>El carrito esta vacío</li>
+  }
+</ul>

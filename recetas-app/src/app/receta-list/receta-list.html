@@ -1,0 +1,28 @@
+<div class="row">
+
+  <div class="col-md-8">
+    <h3>Nuestras Recetas</h3>
+    @for (receta of recetas; track receta.nombre) {
+      <div class="card mb-3">
+          <app-receta-card [receta]="receta"></app-receta-card>
+        <p>Stock disponible: {{ receta.stock }}</p>
+
+        <app-input-number
+          [(quantity)]="receta.cantidad"
+          [max]="receta.stock">
+        </app-input-number>
+
+        <button (click)="addToCart(receta)" [disabled]="receta.stock == 0">
+          Agregar al Pedido
+        </button>
+      </div>
+    }
+  </div>
+
+  <div class="col-md-4 border-start">
+    <app-receta-cart></app-receta-cart>
+  </div>
+</div>
+
+
+
