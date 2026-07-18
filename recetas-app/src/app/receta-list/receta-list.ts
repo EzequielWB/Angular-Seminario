@@ -21,6 +21,8 @@ export class RecetaList {
       esVegano: true,
       stock: 10,
       cantidad: 0,
+      ingredientes: ['Pasta', 'Albahaca', 'Aceite de oliva', 'Ajo', 'Nueces'],
+      pasos: ['Cocinar pasta', 'Procesar pesto', 'Mezclar y servir'],
     },
     {
       nombre: 'Tacos al Pastor',
@@ -31,6 +33,8 @@ export class RecetaList {
       esVegano: false,
       stock: 4,
       cantidad: 0,
+      ingredientes: ['Rapiditas', 'Pastores(?)', 'Oregano', 'Verduras'],
+      pasos: ['Cocinar los ingredientes juntos', 'Poner en las rapiditas', 'Disfrutar'],
     },
   ];
 

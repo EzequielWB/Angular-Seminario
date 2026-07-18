@@ -8,4 +8,6 @@ export interface Receta {
   esVegano: boolean;
   stock: number;
   cantidad: number;
+  ingredientes: string[];
+  pasos: string[];
 }

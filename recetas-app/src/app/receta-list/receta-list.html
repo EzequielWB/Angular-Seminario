@@ -4,8 +4,23 @@
     <h3>Nuestras Recetas</h3>
     @for (receta of recetas; track receta.nombre) {
       <div class="card mb-3">
+
           <app-receta-card [receta]="receta"></app-receta-card>
         <p>Stock disponible: {{ receta.stock }}</p>
+
+        <h6>Ingredientes:</h6>
+        <ul>
+          @for (ingrediente of receta.ingredientes; track ingrediente) {
+            <li>{{ ingrediente }}</li>
+          }
+        </ul>
+
+        <h6>Preparación:</h6>
+        <ol>
+          @for (paso of receta.pasos; track paso) {
+            <li>{{ paso }}</li>
+          }
+        </ol>
 
         <app-input-number
           [(quantity)]="receta.cantidad"
